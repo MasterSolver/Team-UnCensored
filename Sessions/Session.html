@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Mentorship Session Booking Page</title>
+    <link rel="stylesheet" href="Session.css">
+</head>
+<body>
+    <header>
+            
+        <div class="logo">
+            <a href="../Index.html"><img src="unscensored.jpg"></a>
+            <br>
+            <centre>
+            <p>Team UnCensored</p></centre>
+        </div>
+
+        <div class="nav">
+            <a href="../Mentors/mentor.html" class="btn">Mentors</a>
+            <a href="../Index.html" class="btn">Home</a>
+        </div>
+        
+        
+    </header>
+    <div class="booking-form">
+        <h2>Mentorship Session Booking Form</h2>
+        <form id="mentorshipBookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+
+            <label for="mentor">Select a Mentor:</label>
+            <div id="mentors">
+                <div class="mentor-card">
+                    <img src="https://via.placeholder.com/60" alt="Mentor 1">
+                    <div>
+                        <h4>Mentor 1: Dr. Birmohan Singh</h4>
+                        <p>Educational Qualification:Ph.D., M.E.</p>
+                    </div>
+                    <input type="radio" id="mentor-1" name="mentor" value="Mentor 1: Dr. Birmohan Singh">
+                    <label for="mentor-1">Choose</label>
+                </div>
+                <div class="mentor-card">
+                    <img src="https://via.placeholder.com/60" alt="Mentor 2">
+                    <div>
+                        <h4>Mentor 2: Dr. Damanpreet Singh</h4>
+                        <p>Educational Qualification:Ph.D., M.Tech, B.Tech.</p>
+                    </div>
+                    <input type="radio" id="mentor-2" name="mentor" value="Mentor 2: Dr. Damanpreet Singh">
+                    <label for="mentor-2">Choose</label>
+                </div>
+                <div class="mentor-card">
+                    <img src="https://via.placeholder.com/60" alt="Mentor 3">
+                    <div>
+                        <h4>Mentor 3: Dr. Major Singh Goraya</h4>
+                        <p>Educational Qualification:Ph.D., M.Tech., B.Tech.</p>
+                    </div>
+                    <input type="radio" id="mentor-3" name="mentor" value="Mentor 3: Dr. Major Singh Goraya">
+                    <label for="mentor-3">Choose</label>
+                </div>
+                <div class="mentor-card">
+                    <img src="https://via.placeholder.com/60" alt="Mentor 4">
+                    <div>
+                        <h4>Mentor 4: Dr. Manoj Sachan</h4>
+                        <p>BEducational Qualification:B.Tech(Computer Science) , M.E(Computer Science), Ph.D (Computer Science & Engineering)</p>
+                    </div>
+                    <input type="radio" id="mentor-4" name="mentor" value="Mentor 4: Dr. Manoj Sachan">
+                    <label for="mentor-4">Choose</label>
+                </div>
+                <div class="mentor-card">
+                    <img src="https://via.placeholder.com/60" alt="Mentor 5">
+                    <div>
+                        <h4>Mentor 5: Dr. Gurjinder Kaur</h4>
+                        <p>Educational Qualification:B.E. Kyrgyz Technical University, Bishkek M.S. BITS, Pilani Ph.D SLIET, Longowal</p>
+                    </div>
+                    <input type="radio" id="mentor-5" name="mentor" value="Mentor 5: Dr. Gurjinder Kaur">
+                    <label for="mentor-5">Choose</label>
+                </div>
+            </div>
+
+            <label for="duration">Duration:</label>
+            <select id="duration" name="duration" required>
+                <option value="">Select duration</option>
+                <option value="30">30 minutes</option>
+                <option value="60">60 minutes</option>
+                <option value="90">90 minutes</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <div id="time-slots">
+                <div class="time-slot">9:00 AM - 9:30 AM</div>
+                <div class="time-slot">9:30 AM - 10:00 AM</div>
+                <div class="time-slot">10:00 AM - 10:30 AM</div>
+                <div class="time-slot">10:30 AM - 11:00 AM</div>
+                <div class="time-slot">11:00 AM - 11:30 AM</div>
+                <div class="time-slot">11:30 AM - 12:00 PM</div>
+            </div>
+
+            <input type="submit" value="Book Mentorship Session">
+        </form>
+    </div>
+
+    <div class="booked-sessions">
+        <h2>Booked Sessions</h2>
+    </div>
+
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Mentorship Session Booked Successfully!</h2>
+            <p>Your mentorship session with <span id="mentor-name"></span> has been booked for <span id="session-duration"></span> minutes on <span id="session-date"></span> at <span id="session-time"></span>.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

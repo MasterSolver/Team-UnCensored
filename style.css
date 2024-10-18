@@ -27,9 +27,26 @@ header {
   
   h1{
     text-align: center;
-    color: #fff;
+    color: transparent;
+    -webkit-text-stroke: 3px darkmagenta;
+    position: relative;
     font-size: 5em;
   }
+  h1::before{
+    content: "MentorShip";
+    position: absolute;
+    width:0%;
+    height:100%;
+    overflow: hidden ;
+    color: darkmagenta;
+    border-right: 8px  darkmagenta;
+    transition: 1s linear;
+  }
+  h1:hover::before{
+    width: 21.4%;
+    
+  }
+
   h3{
     text-align: center;
   }
