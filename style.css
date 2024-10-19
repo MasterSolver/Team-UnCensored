@@ -46,7 +46,7 @@ header {
     transition: 1s linear;
   }
   h1:hover::before{
-    width: 21.4%;
+    width: fit-content;
     
   }
 
